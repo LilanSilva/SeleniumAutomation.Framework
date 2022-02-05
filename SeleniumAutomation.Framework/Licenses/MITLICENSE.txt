@@ -1,0 +1,3 @@
+﻿<PropertyGroup>
+  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+</PropertyGroup>
