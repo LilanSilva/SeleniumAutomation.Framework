@@ -5,7 +5,15 @@ namespace SeleniumAutomation.Framework.SeleniumDrivers
 {
     public static partial class SeleniumDriverSupport
     {
-        public static void ClickElement(this Driver driver, ElementBy by, string elementIdentifier)
+        /// <summary>
+        /// Click Element
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="by"></param>
+        /// <param name="elementIdentifier"></param>
+        /// <param name="waitAfterClick">Wait 200 millisecond after click</param>
+        /// <exception cref="Exception"></exception>
+        public static void ClickElement(this Driver driver, ElementBy by, string elementIdentifier, int waitAfterClick = 250)
         {
             try
             {
@@ -15,7 +23,7 @@ namespace SeleniumAutomation.Framework.SeleniumDrivers
 
                 clickElement.Click();
 
-                Thread.Sleep(500);
+                Thread.Sleep(waitAfterClick);
             }
             catch (WebDriverException e)
             {

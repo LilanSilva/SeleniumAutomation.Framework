@@ -63,6 +63,11 @@ namespace SeleniumAutomation.Framework.SeleniumDrivers
             SeleniumDriver.Instance.Navigate().Forward();
         }
 
+        public static string CurrentUrl(this Driver driver)
+        {
+            return SeleniumDriver.Instance.Url;
+        }
+
         public static void GoToUrl(this Driver driver, string url)
         {
             SeleniumDriver.Instance.Navigate().GoToUrl(url);
